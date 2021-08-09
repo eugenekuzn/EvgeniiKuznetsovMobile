@@ -3,16 +3,19 @@ package pageObjects.nativePageObject;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import java.lang.reflect.Field;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import testValue.ElementNames;
 
 public class EpamTestAppHandle {
+    AppiumDriver localDriver;
     LoginPageObject loginPageObject;
     RegisterPageObject registerPageObject;
     BudgetActivityPageObject budgetActivityPageObject;
 
     public EpamTestAppHandle(AppiumDriver appiumDriver) {
+        this.localDriver = appiumDriver;
         PageFactory.initElements(new AppiumFieldDecorator(appiumDriver), this);
         loginPageObject = new LoginPageObject(appiumDriver);
         registerPageObject = new RegisterPageObject(appiumDriver);

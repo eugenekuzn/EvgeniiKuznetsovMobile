@@ -18,6 +18,6 @@ public class nativeMobileTests extends BaseTest {
         testApp.login(mail, password);
 
         assertThat("Budget Activity Page is opened: ",
-            testApp.checkTheBudgetActivityIsOpened().equals("BudgetActivity"));
+            testApp.checkTheBudgetActivityIsOpened().contains("Budget"));
     }
 }

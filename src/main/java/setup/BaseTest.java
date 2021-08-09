@@ -10,12 +10,17 @@ public class BaseTest extends SetAppiumDriver {
     public EpamTestAppHandle testApp;
     public GoogleMobileSiteHandler googleSite;
 
-    @Parameters({"platformName", "appType", "deviceName", "browserName", "app"})
+    @Parameters({"appType", "platformName", "deviceName", "udid", "browserName", "app", "appPackage", "appActivity",
+                    "bundleId"})
     @BeforeMethod(alwaysRun = true)
-    public void setUp(String platformName, String appType, String deviceName, @Optional("") String browserName,
-                      @Optional("") String app) throws Exception {
+    public void setUp(String appType, String platformName, @Optional("") String deviceName,
+                      @Optional("") String udid,
+                      @Optional("") String browserName,
+                      @Optional("") String app, @Optional("") String appPackage, @Optional("") String appActivity,
+                      @Optional("") String bundleId)
+        throws Exception {
         System.out.println("Before: app type - " + appType);
-        setAppiumDriver(platformName, deviceName, browserName, app);
+        setAppiumDriver(platformName, deviceName, udid, browserName, app, appPackage, appActivity, bundleId);
         setPageObject(appType, getDriver());
     }
 

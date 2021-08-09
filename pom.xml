@@ -39,9 +39,10 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite.file}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>
-                    </systemPropertyVariables>
+<!--                    <systemPropertyVariables>-->
+<!--                        <ts.appium>https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub</ts.appium>-->
+<!--&lt;!&ndash;                        <ts.appium>http://localhost:4723/wd/hub</ts.appium>&ndash;&gt;-->
+<!--                    </systemPropertyVariables>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -76,7 +77,49 @@
                 <suite.file>./src/test/resources/webTNG.xml</suite.file>
             </properties>
         </profile>
+
+        <profile>
+            <id>cloudNativeAndroid</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudNativeAndroid.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudNativeApple</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudNativeApple.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudWebApple</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudWebApple.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cloudWebAndroid</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>src/test/resources/cloudWebAndroid.xml</suite.file>
+            </properties>
+        </profile>
     </profiles>
 
-
+<!--    <properties>-->
+<!--        <token>1kJr4U1GO8XBzKB5YXbtQOl3/ExXIj/Rt4yINzHtSzbnOW/S88fKsN7jufGuF9vGXdXYa+eD0INjQv3pVk0+28EZFLo9GFwLfVB3C8jweKduQelrMLg7WXfrBXbSQ6UU5L9RgTkqNSjuo3/nEjr9KwNn7d2JH8Nnpa0lz+PtvSf98cTFbS4S6dWpSykj3OwYONvjmMoKFO15S4UwNfW4JjTifd3i0sK/b8dMwoYeaPxIrnH40ZgF0VoGlR/KGLxi/o4geuOL+twHtUvNhPUFpLh7wvvhnC+K2NgQjH3WwXmm+21s3d52NOsWi09QgvOBGBE0UvoGrq29OeaqP85no1YE4wuyT42mZ8x9r/HBUGqkBgmXg8En71zE3gZBd1n60wAlhk1mvjfeogIEg8g7XWu+EuIjLW2FOE5EWrw3vcozG8ayaUs+4dt4VDa/Z95XjDAh4upJRY6p6j/n3E18LLDGZJWMbpA8gg+7rqsL4SpvPEcoE8Np2wMqUwKBcyKZKxhOVm27E8KcEXlXXYcFGzL0ppE6U+Q9bRgkAQGqm/GCmxLb4LE6J2cQ05zbTR5Zg1TNjutV5kvgvnuPDxFlrnMO0/4YoPNyhGMFkFWi6GTPMC6enHwEV8BjWr1jgW7HEKOo1DrTpAVe9PNYfirG9ruFxOHjkWf8vSFFA4tfUKjrIWzHVVLxbRVWEJ0Z5B1ksHqZqdH3IfBSISugjiEpmGuY/pFSZVyEGx9sXdbnNNEEu3Vhvc1z+/d9VS7jLBREV2xjlB9XfcnAO+d3leLEGFH4Sjw0YtzByNhKY3UBHpb5C/HRpX8M7y7fv5biJnOGWezjo8uNRgZIqCN8mleWQv2Nm1mDoa1TWVWxBUz4IXzrw/mQ2+unkWjL5hb/kxU6HWPJGVBz5ppf/fPiCPxY/W8</token>-->
+<!--    </properties>-->
 </project>
