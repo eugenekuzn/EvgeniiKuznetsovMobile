@@ -1,5 +1,6 @@
-##1. Create _secure.properties_ in **test\resources\properties** with your current API key.  You should call value as **api_key**
-##2. If you going to run:
+##Create _secure.properties_ in **test\resources\properties** with your current API key.  You should call value as **api_key**
+
+##If you going to run:
   - **Apple Native Cloud Test**, you need:
           1. Make sure you have EPAMTestApp.ipa on test device
           2. Add **deviceName\udid** of your testing device in _cloudNativeApple.xml_ or use current values
