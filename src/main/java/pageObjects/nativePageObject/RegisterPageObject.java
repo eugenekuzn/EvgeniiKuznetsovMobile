@@ -7,28 +7,28 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegisterPageObject implements PathNames {
-    @AndroidFindBy(id = iDPackageName + "registration_email")
+public class RegisterPageObject {
+    @AndroidFindBy(id = PathNames.iDPackageName + "registration_email")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@value = 'user@example.com']")
     private WebElement emailInputField;
 
-    @AndroidFindBy(id = iDPackageName + "registration_username")
+    @AndroidFindBy(id = PathNames.iDPackageName + "registration_username")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@value = 'TimApple']")
     private WebElement usernameInputField;
 
-    @AndroidFindBy(id = iDPackageName + "registration_password")
+    @AndroidFindBy(id = PathNames.iDPackageName + "registration_password")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeSecureTextField[@value = 'Required']")
     private WebElement passwordInputField;
 
-    @AndroidFindBy(id = iDPackageName + "registration_confirm_password")
+    @AndroidFindBy(id = PathNames.iDPackageName + "registration_confirm_password")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeSecureTextField[@value = 'Repeat please']")
     private WebElement confirmPasswordInputField;
 
-    @AndroidFindBy(id = iDPackageName + "register_new_account_button")
+    @AndroidFindBy(id = PathNames.iDPackageName + "register_new_account_button")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name = 'Register new account']")
     private WebElement registerNewAccountButton;
 
-   protected RegisterPageObject(AppiumDriver appiumDriver) {
+    protected RegisterPageObject(AppiumDriver appiumDriver) {
         PageFactory.initElements(new AppiumFieldDecorator(appiumDriver), this);
     }
 }

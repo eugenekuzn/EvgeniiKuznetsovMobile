@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class BudgetActivityPageObject implements PathNames{
+public class BudgetActivityPageObject {
 
-    @FindBy(xpath = titleXPath)
+    @FindBy(xpath = PathNames.titleXPath)
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name = 'Budget']")
     WebElement pageTitle;
 
