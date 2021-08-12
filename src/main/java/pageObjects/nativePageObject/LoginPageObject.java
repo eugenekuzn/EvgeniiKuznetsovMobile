@@ -7,7 +7,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPageObject implements PathNames  {
+public class LoginPageObject {
 
     @AndroidFindBy(id = PathNames.iDPackageName + "register_button")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name = 'Register new account']")
